@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veeresh Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #0f2027, #0a0a0f);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 10%;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h1{
+    font-weight:700;
+    background:linear-gradient(90deg,#00f7ff,#8a2be2);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#aaa;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00f7ff;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:80px;
+}
+
+.hero h1{
+    font-size:55px;
+    background:linear-gradient(90deg,#00f7ff,#8a2be2,#00f7ff);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+    0%{background-position:0%}
+    100%{background-position:200%}
+}
+
+.hero p{
+    margin-top:20px;
+    color:#bbb;
+    max-width:600px;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(90deg,#00f7ff,#8a2be2);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,247,255,0.5);
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px rgba(138,43,226,0.8);
+}
+
+/* SECTION */
+.section{
+    padding:100px 10%;
+}
+
+.title{
+    font-size:32px;
+    margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+/* GLASS CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 0 25px rgba(0,247,255,0.4);
+}
+
+/* PROJECT */
+.project{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.project:hover{
+    box-shadow:0 0 30px rgba(138,43,226,0.5);
+}
+
+/* TAGS */
+.tags span{
+    display:inline-block;
+    padding:6px 12px;
+    margin:5px;
+    background:#111;
+    border-radius:20px;
+    font-size:12px;
+    color:#00f7ff;
+}
+
+/* FORM */
+form input, form textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:#111;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>V.T</h1>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+        I am Veeresh Talawar, a BCA student exploring Web Development, UI Design,
+        and Trading skills to build my future 🚀
+    </p>
+    <button class="btn">Explore Now</button>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+    <h2 class="title">🚀 My Skills</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🌐 Web Development</h3>
+            <p>Building modern responsive websites using HTML, CSS & UI design.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Trading</h3>
+            <p>Stock market analysis, strategies, and risk management.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 UI Design</h3>
+            <p>Creating attractive interfaces with modern layouts & effects.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section class="section">
+    <h2 class="title">💼 Projects & Builds</h2>
+
+    <div class="project">
+        <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Portfolio</span>
+        </div>
+
+        <h3>Modern Portfolio Website</h3>
+        <p>
+            A professional dark-themed portfolio with glass UI, animations,
+            and structured sections to showcase my skills and projects.
+        </p>
+    </div>
+</section>
+
+<!-- TRADING -->
+<section class="section">
+    <h2 class="title">📈 Trading Knowledge</h2>
+
+    <div class="card">
+        <p><b>Technical Analysis:</b> Chart reading & indicators.</p>
+        <p><b>Risk Management:</b> Stop loss & capital control.</p>
+        <p><b>Support/Resistance:</b> Smart entry & exit points.</p>
+    </div>
+</section>
+
+<!-- FEEDBACK -->
+<section class="section">
+    <h2 class="title">📝 Feedback</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Your Feedback"></textarea>
+        <button class="btn">Submit</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Veeresh Talawar | Advanced Portfolio 🚀
+</footer>
+
+</body>
+</html>
